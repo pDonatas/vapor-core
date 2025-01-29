@@ -57,7 +57,7 @@ class VaporHealthCheckCommand extends Command
 
         $configuration = file_get_contents($filename);
 
-        if (! Str::contains($configuration, "'key' => env('NULL_AWS_ACCESS_KEY_ID')")) {
+        if (! Str::contains($configuration, "'key' => env('AWS_ACCESS_KEY_ID')")) {
             throw new Exception(
                 'Laravel 11 or later requires the latest version of Vapor CLI.'
             );
